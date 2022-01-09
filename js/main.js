@@ -112,6 +112,7 @@ async function clicks() {
 
 var checkExist = setInterval(function () {
 	if ($("#mainExists").length) {
+		console.log("Main Exists");
 		data();
 		clicks();
 		clearInterval(checkExist);
