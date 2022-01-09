@@ -94,15 +94,19 @@ async function clicks() {
 	).then((res) => res.text());
 	$(document).on("click", ".navHome", function () {
 		alert("You're trying to go to Home");
+		$("body").html(home);
 	});
 	$(document).on("click", ".navBrow", function () {
 		alert("You're trying to go to Browser");
+		$("body").html(brow);
 	});
 	$(document).on("click", ".navChat", function () {
 		alert("You're trying to go to Chat");
+		$("body").html(chat);
 	});
 	$(document).on("click", ".navReq", function () {
 		alert("You're trying to go to Requests");
+		$("body").html(req);
 	});
 }
 
