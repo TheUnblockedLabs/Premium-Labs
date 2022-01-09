@@ -79,10 +79,37 @@ async function data() {
 	).then((res) => res.json());
 	console.log(test);
 }
+async function clicks() {
+	let home = await fetch(
+		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/main.html"
+	).then((res) => res.text());
+	let brow = await fetch(
+		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/brow.html"
+	).then((res) => res.text());
+	let chat = await fetch(
+		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/chat.html"
+	).then((res) => res.text());
+	let req = await fetch(
+		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/req.html"
+	).then((res) => res.text());
+	$(".navHome").click(function () {
+		$("body").html(home);
+	});
+	$(".navBrow").click(function () {
+		$("body").html(brow);
+	});
+	$(".navChat").click(function () {
+		$("body").html(chat);
+	});
+	$(".navReq").click(function () {
+		$("body").html(req);
+	});
+}
 
 var checkExist = setInterval(function () {
 	if ($("#mainExists").length) {
 		data();
+		clicks();
 		clearInterval(checkExist);
 	}
 }, 100);
