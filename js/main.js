@@ -93,15 +93,19 @@ async function clicks() {
 		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/req.html"
 	).then((res) => res.text());
 	$(".navHome").click(function () {
+		console.log("home");
 		$("body").html(home);
 	});
 	$(".navBrow").click(function () {
+		console.log("browser");
 		$("body").html(brow);
 	});
 	$(".navChat").click(function () {
+		console.log("chat");
 		$("body").html(chat);
 	});
 	$(".navReq").click(function () {
+		console.log("request");
 		$("body").html(req);
 	});
 }
