@@ -92,21 +92,17 @@ async function clicks() {
 	let req = await fetch(
 		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/req.html"
 	).then((res) => res.text());
-	$(".navHome").click(function () {
-		console.log("home");
-		$("body").html(home);
+	$(document).on("click", ".navHome", function () {
+		alert("You're trying to go to Home");
 	});
-	$(".navBrow").click(function () {
-		console.log("browser");
-		$("body").html(brow);
+	$(document).on("click", ".navBrow", function () {
+		alert("You're trying to go to Browser");
 	});
-	$(".navChat").click(function () {
-		console.log("chat");
-		$("body").html(chat);
+	$(document).on("click", ".navChat", function () {
+		alert("You're trying to go to Chat");
 	});
-	$(".navReq").click(function () {
-		console.log("request");
-		$("body").html(req);
+	$(document).on("click", ".navReq", function () {
+		alert("You're trying to go to Requests");
 	});
 }
 
