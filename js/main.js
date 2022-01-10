@@ -79,42 +79,10 @@ async function data() {
 	).then((res) => res.json());
 	console.log(test);
 }
-async function clicks() {
-	let home = await fetch(
-		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/main.html"
-	).then((res) => res.text());
-	let brow = await fetch(
-		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/brow.html"
-	).then((res) => res.text());
-	let chat = await fetch(
-		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/chat.html"
-	).then((res) => res.text());
-	let req = await fetch(
-		"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/req.html"
-	).then((res) => res.text());
-	$(document).on("click", ".navHome", function () {
-		alert("You're trying to go to Home");
-		$("body").html(home);
-	});
-	$(document).on("click", ".navBrow", function () {
-		alert("You're trying to go to Browser");
-		$("body").html(brow);
-	});
-	$(document).on("click", ".navChat", function () {
-		alert("You're trying to go to Chat");
-		$("body").html(chat);
-	});
-	$(document).on("click", ".navReq", function () {
-		alert("You're trying to go to Requests");
-		$("body").html(req);
-	});
-}
 
 var checkExist = setInterval(function () {
 	if ($("#mainExists").length) {
-		console.log("Main Exists");
 		data();
-		clicks();
 		clearInterval(checkExist);
 	}
 }, 100);
