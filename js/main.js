@@ -99,7 +99,7 @@ var checkExist = setInterval(async function () {
 			console.log("main");
 			$("body").html(main);
 		});
-		$(document).on("click", ".navchat", function () {
+		$(document).on("click", ".navChat", function () {
 			console.log("chat");
 			$("body").html(chat);
 		});
