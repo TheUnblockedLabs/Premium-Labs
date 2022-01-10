@@ -80,7 +80,7 @@ async function data() {
 	console.log(test);
 }
 
-var checkExist = setInterval(function () {
+var checkExist = setInterval(async function () {
 	if ($("#mainExists").length) {
 		data();
 		let main = await fetch(
