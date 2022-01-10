@@ -54,6 +54,7 @@ header {
 }
 
 .cta:hover {
+	color: #edf0f1 !important;
 	background-color: rgba(0, 136, 169, 0.8);
 }
 
