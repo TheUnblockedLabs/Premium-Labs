@@ -83,6 +83,35 @@ async function data() {
 var checkExist = setInterval(function () {
 	if ($("#mainExists").length) {
 		data();
+		let main = await fetch(
+			"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/main.html"
+		).then((res) => res.text());
+		let chat = await fetch(
+			"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/chat.html"
+		).then((res) => res.text());
+		let req = await fetch(
+			"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/req.html"
+		).then((res) => res.text());
+		let brow = await fetch(
+			"https://raw.githubusercontent.com/TheUnblockedLabs/important/main/templates/brow.html"
+		).then((res) => res.text());
+		$(document).on("click", ".navHome", function () {
+			console.log("main");
+			$("body").html(main);
+		});
+		$(document).on("click", ".navchat", function () {
+			console.log("chat");
+			$("body").html(chat);
+		});
+		$(document).on("click", ".navReq", function () {
+			console.log("Req");
+			$("body").html(req);
+		});
+		$(document).on("click", ".navBrow", function () {
+			console.log("browser");
+			$("body").html(brow);
+		});
+		console.log("Main Exists!");
 		clearInterval(checkExist);
 	}
 }, 100);

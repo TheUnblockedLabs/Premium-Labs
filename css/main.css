@@ -127,3 +127,10 @@ header {
 		display: initial;
 	}
 }
+
+.navChat,
+.navBrow,
+.navHome,
+.navReq {
+	cursor: pointer;
+}
