@@ -119,7 +119,7 @@ header {
 	}
 }
 
-@media only screen and (max-width: 1186px) {
+@media only screen and (max-width: 1370px) {
 	.nav__links,
 	.cta {
 		display: none;
